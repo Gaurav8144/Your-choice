@@ -7,19 +7,39 @@
     body {
       font-family: Arial, sans-serif;
       background: #eef;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .top-ad, .bottom-ad {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .main {
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .side-ad {
+      width: 160px;
+      margin: 10px;
     }
 
     .container {
-      text-align: center;
-      background: white;
+      flex: 1;
+      margin: 10px;
       padding: 40px;
+      background: white;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
     input[type="text"] {
@@ -50,18 +70,93 @@
       font-size: 28px;
       font-weight: bold;
     }
+
+    @media screen and (max-width: 768px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .side-ad {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Colorful Text Generator</h1>
-    <form method="post" action="/colorful">
-      <input type="text" name="user_input" placeholder="Enter text here" required>
-      <button type="submit">Make Colorful</button>
-    </form>
-    <div class="result">
-      {{ result | safe }}
+
+  <!-- Top Banner Ad -->
+  <div class="top-ad">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'aaf1c4165cd56377ac1bb6e6006aa2e6',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/aaf1c4165cd56377ac1bb6e6006aa2e6/invoke.js"></script>
+  </div>
+
+  <div class="main">
+    <!-- Left Side Ad -->
+    <div class="side-ad">
+      <script type="text/javascript">
+        atOptions = {
+          'key': 'ac79a2eb0d94c69d6f03fd4222a9dee1',
+          'format': 'iframe',
+          'height': 600,
+          'width': 160,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/ac79a2eb0d94c69d6f03fd4222a9dee1/invoke.js"></script>
+    </div>
+
+    <!-- Center Content -->
+    <div class="container">
+      <h1>Colorful Text Generator</h1>
+      <form method="post" action="/colorful">
+        <input type="text" name="user_input" placeholder="Enter text here" required>
+        <button type="submit">Make Colorful</button>
+      </form>
+      <div class="result">
+        {{ result | safe }}
+      </div>
+    </div>
+
+    <!-- Right Side Ad -->
+    <div class="side-ad">
+      <script type="text/javascript">
+        atOptions = {
+          'key': '882d3f32bcd8c352c33b71571786ecf4',
+          'format': 'iframe',
+          'height': 300,
+          'width': 160,
+          'params': {}
+        };
+      </script>
+      <script type="text/javascript" src="//www.highperformanceformat.com/882d3f32bcd8c352c33b71571786ecf4/invoke.js"></script>
     </div>
   </div>
+
+  <!-- Bottom Banner Ad -->
+  <div class="bottom-ad">
+    <script type="text/javascript">
+      atOptions = {
+        'key': '8c71a4c35ac9fe281279ec01e9a3ed5e',
+        'format': 'iframe',
+        'height': 60,
+        'width': 468,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/8c71a4c35ac9fe281279ec01e9a3ed5e/invoke.js"></script>
+  </div>
+
+  <!-- Hidden Script Ad (like popup or overlay) -->
+  <script type='text/javascript' src='//pl27285076.profitableratecpm.com/a6/62/3a/a6623a4e765093607c4dd05e8b32cda4.js'></script>
+
 </body>
 </html>
